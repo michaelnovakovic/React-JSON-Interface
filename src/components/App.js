@@ -1,9 +1,21 @@
-import React from 'react';
-import '../css/App.css';
+import React, { Component } from "react";
+import "../css/App.css";
 
-function App() {
+import AddGames from "./AddGames";
+import ListGames from "./ListGames";
+import SearchGames from "./SearchGames";
+
+class App extends Component () {
   return (
-    <div>Hello World,</div>
+      <div>
+        <AddGames />
+      </div>
+      <div>
+        <ListGames />
+      </div>
+      <div>
+        <SearchGames />
+      </div>
   );
 }
 
