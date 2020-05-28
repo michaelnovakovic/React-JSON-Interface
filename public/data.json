@@ -1,8 +1,10 @@
 [
     {
-        "gameName": "Star Wars Fallen Order",
-        "companyName": "Respawn Entertainment",
-        "gameDescription": "Great game!",
-        "releaseDate": "2010-11-28 13:30"
+        "dogName": "Afador",
+        "dogImage": "/img/afador.jpeg",
+        "dogBreedGroup": "Mixed Breed Groups",
+        "dogWeight": "50 to 75 lbs",
+        "DogHeight": "20 to 29 Inches",
+        "DogLifeSpan": "10 to 12 Years"
     }
 ]
