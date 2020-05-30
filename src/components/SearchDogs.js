@@ -52,6 +52,30 @@ class SearchDogs extends Component {
                 <button
                   className={
                     'sort-by dropdown-item ' +
+                    (this.props.orderBy === 'dogHeight' ? 'active' : '')
+                  }
+                  onClick={e =>
+                    this.props.changeOrder('dogHeight', this.props.orderDir)
+                  }
+                  href="#"
+                >
+                  Height
+                </button>
+                <button
+                  className={
+                    'sort-by dropdown-item ' +
+                    (this.props.orderBy === 'dogLifeSpan' ? 'active' : '')
+                  }
+                  onClick={e =>
+                    this.props.changeOrder('dogLifeSpan', this.props.orderDir)
+                  }
+                  href="#"
+                >
+                  Life Span
+                </button>
+                <button
+                  className={
+                    'sort-by dropdown-item ' +
                     (this.props.orderBy === 'dogWeight' ? 'active' : '')
                   }
                   onClick={e =>
