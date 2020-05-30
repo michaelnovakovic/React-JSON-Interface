@@ -1,10 +1,50 @@
 [
     {
-        "dogName": "Afador",
-        "dogImage": "/img/afador.jpeg",
-        "dogBreedGroup": "Mixed Breed Groups",
-        "dogWeight": "50 to 75 lbs",
-        "DogHeight": "20 to 29 Inches",
-        "DogLifeSpan": "10 to 12 Years"
+        "dogName": "American Terrier",
+        "dogImage": "/img/american.jpg",
+        "dogBreedGroup": "Terrier Dogs",
+        "dogHeight": "16 to 19 inches",
+        "dogWeight": "40 to 60 pounds",
+        "dogLifeSpan": "10 to 15 Years"
+    },
+    {
+        "dogName": "French Bulldog",
+        "dogImage": "/img/frenchbulldog.jpg",
+        "dogBreedGroup": "Companion Dogs",
+        "dogHeight": "11 to 12 inches",
+        "dogWeight": "16 to 28 lbs",
+        "dogLifeSpan": "11 to 14 Years"
+    },
+        {
+        "dogName": "Golden Retriever",
+        "dogImage": "/img/golden.jpg",
+        "dogBreedGroup": "Sporting Dogs",
+        "dogHeight": "1 foot, 9 inches",
+        "dogWeight": "55 to 75 pounds",
+        "dogLifeSpan": "10 to 12 Years"
+    },
+    {
+        "dogName": "Siberian Husky",
+        "dogImage": "/img/husky.jpg",
+        "dogBreedGroup": "Working Dogs",
+        "dogHeight": "20 to 23 inches",
+        "dogWeight": "35 to 60 pounds",
+        "dogLifeSpan": "12 to 15 Years"
+    },
+    {
+        "dogName": "Rottweiler",
+        "dogImage": "/img/rotty.jpg",
+        "dogBreedGroup": "Working Dogs",
+        "dogHeight": "1 foot, 10 inches",
+        "dogWeight": "85 to 130 pounds",
+        "dogLifeSpan": "8 to 11 Years"
+    },
+    {
+        "dogName": "Dalmatian",
+        "dogImage": "/img/dalmatian.jpg",
+        "dogBreedGroup": "Companion Dogs",
+        "dogHeight": "1 foot, 7 inches",
+        "dogWeight": "48 to 55 pounds",
+        "dogLifeSpan": "13 to 16 Years"
     }
 ]

@@ -1,3 +1,77 @@
-img {
-  height: 200px;
+body {
+  background-color: #C2C1C2;
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.searchBar {
+  margin-left: 0.5%;
+}
+
+.row.spaceBelow {
+  margin-bottom: 6%;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.card {
+  margin-bottom: 8%;
+}
+
+.bg-dark {
+  background-color: #1A659E !important;
+}
+
+.section1 {
+  padding: 10px;
+  margin-top: 1%;
+}
+
+.header {
+  color: white;
+  font-size: 32px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.footer {
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .input-group-append {
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+  .row.spaceBelow {
+    margin-bottom: 14%;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .input-group-append {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .row.spaceBelow {
+    margin-bottom: 14%;
+  }
 }

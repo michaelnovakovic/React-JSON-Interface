@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import "../css/App.css";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
-import ListGames from "./ListGames";
+import ListDogs from "./ListDogs";
+import SearchDogs from "./SearchDogs";
 
 class App extends Component {
   constructor() {
@@ -11,7 +13,25 @@ class App extends Component {
     this.state = {
       // sets the current state of the constructor class
       myDogs: [], // holds the data from json file within array
+      formDisplay: false,
+      orderBy: 'dogName', // orders the array by the field dogName
+      orderDir: 'asc', // sets the direction of the ordering of array
+      queryText: '', // sets the query to empty
+      lastIndex: 0 // starts the id at 0
     };
+    this.changeOrder = this.changeOrder.bind(this);
+    this.SearchDogs = this.SearchDogs.bind(this);
+  }
+
+  SearchDogs(query) {
+    this.setState({ queryText: query });
+  }
+
+  changeOrder(order, dir) {
+    this.setState({
+      orderBy: order,
+      orderDir: dir
+    });
   }
 
   componentDidMount() {
@@ -21,6 +41,8 @@ class App extends Component {
       .then((result) => {
         // the result of the data being fetched
         const dogs = result.map((item) => {
+          item.dogId = this.state.lastIndex; // ID starts at 0
+          this.setState({ lastIndex: this.state}) // 
           // created variable to hold each item in the json file
           return item; // returns the content of the json file
         });
@@ -33,15 +55,59 @@ class App extends Component {
 
   render() {
 
+    let order;
+    let filteredDogs = this.state.myDogs;
+    if (this.state.orderDir === 'asc') {
+      order = 1;
+    } else {
+      order = -1;
+    }
+
+    filteredDogs = filteredDogs
+      .sort((a, b) => {
+        if (
+          a[this.state.orderBy].toLowerCase() <
+          b[this.state.orderBy].toLowerCase()
+        ) {
+          return -1 * order;
+        } else {
+          return 1 * order;
+        }
+      })
+      .filter(eachItem => {
+        return (
+          eachItem['dogName']
+            .toLowerCase()
+            .includes(this.state.queryText.toLowerCase()) || 
+          eachItem['dogBreedGroup']
+            .toLowerCase()
+            .includes(this.state.queryText.toLowerCase()) ||
+            eachItem['dogWeight']
+            .toLowerCase()
+            .includes(this.state.queryText.toLowerCase())
+        );
+      });
+
     return (
       <div>
-            <div><Header /></div>
-            <div class="container">
-            <ListGames dogs={this.state.myDogs}/>
-            </div>
-            <div>Footer</div>
+        <div>
+          <Header />
+        </div>
+        <div className="col-sm-12 section1">
+        <SearchDogs
+            orderBy={this.state.orderBy}
+            orderDir={this.state.orderDir}
+            changeOrder={this.changeOrder}
+            SearchDogs={this.SearchDogs}
+          />
+        </div>
+        <div className="container-fluid">
+          <ListDogs dogs={filteredDogs} />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
-
     );
   }
 }

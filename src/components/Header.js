@@ -4,8 +4,8 @@ class Header extends Component {
     render() {
 
         const Header = (
-          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <span class="navbar-text">Find A Doggy</span>
+          <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+           <h1 className="header">Dog Information</h1>
           </nav>
         );
 
