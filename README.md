@@ -1,3 +1,5 @@
+The final completed project is within branch v_01. The master branch is the starter react template. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
